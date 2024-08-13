@@ -1,0 +1,344 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('R.png'); 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+    font-family: Raleway, Arial, sans-serif;
+    margin: 5em auto;
+    width: 70%;
+}
+
+/* Hero Section */
+.hero {
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: clamp(2em, 5vw, 3em);
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #008000 30%, #ffffff 50%, #023242);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto; 
+    min-height: 100vh;
+    padding-top: 5em;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, #800080 70%, #ff0000 85%, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+    height: 10em;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: clamp(1.5em, 3vw, 2.5em); 
+    
+    margin: 0.5em 0;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce h1{
+    display: inline-block;
+    animation: bounce 3s infinite;
+    font-size: clamp(1.5em, 3vw, 2.5em); 
+}
+
+h3 {
+    font-size: clamp(1em, 2.5vw, 1.5em);
+    margin: 0.5em 0;
+    font-weight: normal;
+    line-height: 4px;
+    padding-bottom: 2em;
+}
+
+header p {
+    font-size: clamp(1em, 2.5vw, 1.2em);
+    margin: 1em 0;
+    max-width: 600px;
+    text-align: center; 
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 16px;
+    background-color: black;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+@media (max-width: 340px) {
+    .btn {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center;
+    }
+
+    button {
+        width: 100%; /* Ensure buttons take up full width */
+        margin-bottom: 10px; /* Add space between stacked buttons */
+    }
+}
+
+
+main {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; /* Center text in main */
+}
+
+/* About Section Styles */
+.bout-img img {
+    width: 100%;
+    min-width: 60px;
+    margin-top: 3em;
+}
+
+.about h1 {
+    text-shadow: 
+    rgba(255, 0, 0, 0.5) 0px 0px 10px,
+    rgba(0, 255, 0, 0.5) 0px 0px 20px,
+    rgba(0, 0, 255, 0.5) 0px 0px 30px;
+}
+
+.about p {
+    font-size: clamp(1em, 2.5vw, 1.2em);
+    line-height: 1.5em; 
+    max-height: 11em; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 1em 0;
+    padding: 0 1em;
+    text-align: center; /* Center text in about section */
+}
+
+/* Experience Section Styles */
+.experience {
+    margin-top: 3em;
+    text-align: center; /* Center text in experience section */
+}
+
+.experience .exphead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    min-width: 100px;
+}
+
+.experience h1 {
+    text-shadow: 
+    rgba(255, 0, 0, 0.5) 0px 0px 10px,
+    rgba(0, 255, 0, 0.5) 0px 0px 20px,
+    rgba(0, 0, 255, 0.5) 0px 0px 30px;
+    text-align: center;
+}
+
+.experience .exphead h4 {
+    margin: 0;
+    font-size: clamp(1em, 2.5vw, 1.2em);
+}
+
+.experience .exphead p {
+    margin: 0;
+    font-size: clamp(0.8em, 2vw, 1.2em);
+    color: #888;
+}
+
+.experience ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Align list items to the left */
+}
+
+.experience ul li {
+    margin-bottom: 10px;
+    font-size: clamp(0.9em, 2.2vw, 1.1em);
+    line-height: 1.6;
+    text-align: left; /* Align list items to the left */
+}
+
+.experience p {
+    margin: 1em 0;
+    font-size: clamp(0.9em, 2.2vw, 1.1em);
+    line-height: 1.6;
+    text-align: center; /* Center text in experience section */
+}
+
+/* Additional Styles for Skills (if needed) */
+.experience .skills {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.experience .skills div {
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-size: clamp(0.7em, 2vw, 0.9em);
+}
+
+/* Projects Section Styles */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center; /* Center text in projects section */
+}
+
+.projects-container h1 {
+    text-shadow: 
+    rgba(255, 0, 0, 0.5) 0px 0px 10px,
+    rgba(0, 255, 0, 0.5) 0px 0px 20px,
+    rgba(0, 0, 255, 0.5) 0px 0px 30px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    flex-direction: column;
+    text-align: center; /* Center text in individual projects */
+}
+
+.project-img img {
+    width: 100%;
+    min-width: 60px;
+    margin-top: 3em;
+}
+
+.project p {
+    font-size: clamp(0.9em, 2.2vw, 1.1em);
+    margin-bottom: 1em;
+    text-align: center; /* Center text in project descriptions */
+}
+
+footer{
+    text-align: center;
+    padding: 2em 0;
+    
+    color: #fff;
+}
+.alternate-contact{
+    padding-top: 5em;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    
+    
+    
+}
+
+
+.alternate-contact svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    fill: currentColor; /* Ensures the color changes with your theme */
+}
+
+.alternate-contact svg:hover{
+    transform: scale(1.1)
+}
+@media screen and (max-width: 400px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    header, main, .hero, .about, .experience, .projects-container, .alternate-contact, .footer {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+        .bounce, .logo{
+            padding-top: 1.5em;
+        }
+    h1, h3, p, .button {
+        font-size: clamp(1em, 2vw, 1.2em);
+    }
+
+    .about h1, .experience h1, .projects-container h1 {
+        font-size: clamp(2em, 5vw, 3em); /* Increase the font size */
+    }
+
+    .about p{
+        
+        line-height: 1.2;
+    }
+
+    .experience ul {
+        padding-left: 10px;
+    }
+
+    .about h1, .experience h1, .projects-container h1 {
+        text-shadow: 
+        rgba(255, 0, 0, 0.8) 0px 0px 15px,    
+        rgba(0, 255, 0, 0.8) 0px 0px 25px,    
+        rgba(0, 0, 255, 0.8) 0px 0px 35px;
+    }
+}
